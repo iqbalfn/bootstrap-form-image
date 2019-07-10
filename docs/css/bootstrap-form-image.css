@@ -1,0 +1,61 @@
+/*!
+ * Bootstrap Form Files v0.0.1 (https://iqbalfn.github.io/bootstrap-form-image/)
+ * Copyright 2019 Iqbal Fauzi
+ * Licensed under MIT (https://github.com/iqbalfn/bootstrap-form-image/blob/master/LICENSE)
+ */
+.formimage-model {
+  display: none;
+}
+
+.formimage {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  height: 10rem;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.formimage.empty .formimage-clear {
+  display: none;
+}
+
+.formimage:not(.empty) .formimage-preview > * {
+  display: none;
+}
+
+.formimage:not(.empty):hover .formimage-preview {
+  opacity: .5;
+}
+
+.formimage-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: opacity 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .formimage-preview {
+    transition: none;
+  }
+}
+
+.formimage-clear {
+  position: absolute;
+  right: 1.125rem;
+  top: 0.75rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/*# sourceMappingURL=bootstrap-form-image.css.map */

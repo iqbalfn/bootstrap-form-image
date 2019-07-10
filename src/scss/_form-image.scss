@@ -1,0 +1,56 @@
+.formimage-model{
+    display: none;
+}
+
+.formimage{
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    padding: $formimage-padding-y $formimage-padding-x;
+    height: $formimage-height;
+    background-clip: padding-box;
+    border: $formimage-border-width solid $formimage-border-color;
+    @include border-radius($formimage-border-radius, 0);
+    @include box-shadow($formimage-box-shadow);
+
+    &.empty{
+        .formimage-clear{
+            display: none;
+        }
+    }
+
+    &:not(.empty){
+        .formimage-preview{
+            > *{
+                display: none;
+            }
+        }
+        &:hover{
+            .formimage-preview{
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.formimage-preview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    background-color: $formimage-preview-bg-color;
+    @include transition($formimage-preview-transition);
+}
+
+.formimage-clear{
+    position: absolute;
+    right: ( $formimage-padding-x * 1.5 );
+    top: $formimage-padding-y;
+    cursor: pointer;
+    z-index: 1000;
+}

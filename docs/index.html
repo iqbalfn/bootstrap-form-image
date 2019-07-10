@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css">
+    <link rel="stylesheet" href="css/bootstrap-form-image.css">
+
+    <title>Bootstrap Form Image</title>
+
+    <style>
+        h1{ margin-top: 80px; }
+        h2,h3{ margin-top: 40px; }
+        .example{ border: 4px solid #eee; margin-bottom:30px;}
+        .example-preview{ padding: 1.5rem; }
+        .example > pre{ border-top: 4px solid #eee;margin:0; }
+        .no-html{ display: none; }
+        .highlihgt-grid .row + .row{ margin-top: 1rem;}
+        .highlihgt-grid [class^="col-"]{
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid rgba(86,61,124,.2);
+        }
+    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-1746437125043617",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bootstrap Form Image</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iqbalfn/bootstrap-form-image">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iqbalfn/bootstrap-form-image/archive/master.zip">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>Form Image</h1>
+                <p class="lead">Use Bootstrap's JavaScript form image plugin to add image picker/preview in your regular form.</p>
+
+                <p>This plugin do not handle file picker, or file upload, and image previewer. You need to define function for image picker, and previewer ( if any ).</p>
+
+                <section>
+                    <h2>Examples</h2>
+                    <article>
+                        <section>
+                            <h3>Form Image Components</h3>
+
+                            <article>
+                                <p>This is an example of form image component with preset image as default value. Clicking the image will do nothing as we do not define image previewer.</p>
+                                <p>Clicking on the <code>x</code> icon will clear the image and the component ready for new image file</p>
+                                <p>When the image is empty, clicking on it will open prompt for image URL input. The prompt is default image picker if not provided.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <div style="width:20rem">
+                                            <div class="form-group">
+                                                <label for="ffs-1">Cover</label>
+                                                <input name="file" class="formimage-model" id="input-cover" value="img/annie-spratt.jpg"></input>
+                                                <div class="formimage" id="ffs-1" data-model="#input-cover">
+                                                    <button type="button" class="close formimage-clear" aria-label="Close" title="Clear">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <a class="formimage-preview" style="background-image:url(img/annie-spratt.jpg)" href="img/annie-spratt.jpg" target="_blank">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#CCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+                                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                                            <polyline points="21 15 16 10 5 21"></polyline>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Empty State</h3>
+
+                            <article>
+                                <p>You may add class <code>.empty</code> to the <code>.formimage</code> element to show content inside <code>.formimage-preview</code>. Removing the class will hide all element inside <code>.formimage-preview</code> element.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <div style="width:20rem">
+                                            <div class="form-group">
+                                                <label for="ffs-2">Cover</label>
+                                                <input name="file" class="formimage-model" id="input-cover2"></input>
+                                                <div class="formimage empty" id="ffs-2" data-model="#input-cover2">
+                                                    <button type="button" class="close formimage-clear" aria-label="Close" title="Clear">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <a class="formimage-preview" target="_blank">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#CCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+                                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                                            <polyline points="21 15 16 10 5 21"></polyline>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </article>
+                </section>
+
+                <section>
+                    <h2>Usage</h2>
+                    <article>
+                        <p>The form image plugin component make it easy for user to select image instaed of browser default input form control. The original image URL saved in the model element. Any change to the model will update the component only if the element already initialized manually.</p>
+
+                        <p>Initialization can be done with js or by element attribute.</p>
+
+                        <section>
+                            <h3>Via JavaScript</h3>
+                            <article>
+                                <p>Call a form image with id <code>myFormImage</code> with a single line of JavaScript</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#myFormImage').formimage(options);
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Options</h3>
+                            <article>
+                                <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-maxsize=""</code>.</p>
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>imagePicker</td>
+                                            <td>function</td>
+                                            <td><code>cb => cb( prompt('Image URL') )</code></td>
+                                            <td>
+                                                <p>Function to call when user click the the preview image area when no image is there yet. You've to provide this function by your self. This module not provide any. If the value is a string, it will try to find it from <code>window</code> method.</p>
+                                                <p>The function get called with parameter function <code>cb</code> as the first argument, and object <code>formimage</code> as the second argument.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>imagePreviewer</td>
+                                            <td>boolean|function</td>
+                                            <td>true</td>
+                                            <td>
+                                                <p>Function to call when user click the preview image area when there's image on it. It means to show some kind of image previewer.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Methods</h3>
+
+                            <article>
+                                <h4><code>.formimage(options)</code></h4>
+                                <p>Activate your content as a form image component. Accept an optional options <code>object</code>.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-image').formimage({
+                                            imagePicker    : cb => cb({...}),
+                                            imagePreviewer : url => alert(url)
+                                        })
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.setImage(URL)</code></h4>
+                                <p>Change the URL of the image.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-image')
+                                            .data('bs.formimage')
+                                            .setImage(URL)
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.clear()</code></h4>
+                                <p>Back to empty state, and remove the value of the model.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-image')
+                                            .data('bs.formimage')
+                                            .clear(index)
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.preview()</code></h4>
+                                <p>Execute preview callback.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-image')
+                                            .data('bs.formimage')
+                                            .preview()
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <h4><code>#.pick()</code></h4>
+                                <p>Execute image picker callback.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code no-html" data-hl="js">
+                                        $('#my-form-image')
+                                            .data('bs.formimage')
+                                            .pick()
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Events</h3>
+                            <p>Bootstrap's form image class exposes a few events for hooking into form image functionality. All form image events are fired at the form image container itself (i.e at the <code>&lt;div class="formimage"&gt;</code>).</p>
+
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr><th>Event Type</th><th>Description</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>update.bs.formimage</td>
+                                        <td>This event fires immediately when new image is about to add to the model. It's when model value not yet change, and the view not yet updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>updated.bs.formimage</td>
+                                        <td>This event fires immediately when new image just added to the model. It's when model value change, and the view already updated. The <code>change.bs.formimage</code> called right after this.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>change.bs.formimage</td>
+                                        <td>This event fires immediately when data in model changes. It's when model value already changed, and the view already updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>clear.bs.formimage</td>
+                                        <td>This event fires immediately when a file is about to remove from the model. It's when model value not yet change, and the view not yet updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cleared.bs.formimage</td>
+                                        <td>This event fires immediately when a file just removed from model. It's when model value change, and the view already updated. The <code>change.bs.formimage</code> called right after this.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="example">
+                                <div class="example-preview source-code no-html" data-hl="js">
+                                    $('#my-form-image').on('added.bs.formimage', function(e){
+                                        // do something...
+                                    })
+                                </div>
+                            </div>
+                        </section>
+
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js" data-manual></script>
+    <script src="js/source.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-form-image.js"></script>
+
+    <script>
+        $('.formimage').on('update.bs.formimage updated.bs.formimage change.bs.formimage clear.bs.formimage cleared.bs.formimage', function(e){
+            console.log(e.type)
+        })
+    </script>
+</body>
+</html>
