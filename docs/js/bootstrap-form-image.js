@@ -273,6 +273,7 @@
       this._preview = $(element).children(Selector.PREVIEW).get(0);
       this._model = document.querySelector(this._element.dataset.model);
       this._value = this._model.value;
+      if (typeof this._config.imagePicker === 'string') this._config.imagePicker = window[this._config.imagePicker];
 
       this._addModelListener();
     } // Getters

@@ -69,6 +69,9 @@ class FormImage {
 
         this._value         = this._model.value
 
+        if(typeof this._config.imagePicker === 'string')
+            this._config.imagePicker = window[this._config.imagePicker]
+
         this._addModelListener()
     }
 

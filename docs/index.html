@@ -76,7 +76,7 @@
                                         <div style="width:20rem">
                                             <div class="form-group">
                                                 <label for="ffs-1">Cover</label>
-                                                <input name="file" class="formimage-model" id="input-cover" value="img/annie-spratt.jpg"></input>
+                                                <input name="file" class="formimage-model" id="input-cover" value="img/annie-spratt.jpg">
                                                 <div class="formimage" id="ffs-1" data-model="#input-cover">
                                                     <button type="button" class="close formimage-clear" aria-label="Close" title="Clear">
                                                         <span aria-hidden="true">&times;</span>
@@ -106,7 +106,7 @@
                                         <div style="width:20rem">
                                             <div class="form-group">
                                                 <label for="ffs-2">Cover</label>
-                                                <input name="file" class="formimage-model" id="input-cover2"></input>
+                                                <input name="file" class="formimage-model" id="input-cover2">
                                                 <div class="formimage empty" id="ffs-2" data-model="#input-cover2">
                                                     <button type="button" class="close formimage-clear" aria-label="Close" title="Clear">
                                                         <span aria-hidden="true">&times;</span>
@@ -131,7 +131,7 @@
                 <section>
                     <h2>Usage</h2>
                     <article>
-                        <p>The form image plugin component make it easy for user to select image instaed of browser default input form control. The original image URL saved in the model element. Any change to the model will update the component only if the element already initialized manually.</p>
+                        <p>The form image plugin component make it easy for user to select image instead of browser default input form control. The original image URL saved in the model element. Any change to the model will update the component only if the element already initialized manually.</p>
 
                         <p>Initialization can be done with js or by element attribute.</p>
 
@@ -169,7 +169,7 @@
                                         </tr>
                                         <tr>
                                             <td>imagePreviewer</td>
-                                            <td>boolean|function</td>
+                                            <td>boolean <br> function</td>
                                             <td>true</td>
                                             <td>
                                                 <p>Function to call when user click the preview image area when there's image on it. It means to show some kind of image previewer.</p>
@@ -260,24 +260,24 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>update.bs.formimage</td>
-                                        <td>This event fires immediately when new image is about to add to the model. It's when model value not yet change, and the view not yet updated.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>updated.bs.formimage</td>
-                                        <td>This event fires immediately when new image just added to the model. It's when model value change, and the view already updated. The <code>change.bs.formimage</code> called right after this.</td>
-                                    </tr>
-                                    <tr>
                                         <td>change.bs.formimage</td>
                                         <td>This event fires immediately when data in model changes. It's when model value already changed, and the view already updated.</td>
                                     </tr>
                                     <tr>
                                         <td>clear.bs.formimage</td>
-                                        <td>This event fires immediately when a file is about to remove from the model. It's when model value not yet change, and the view not yet updated.</td>
+                                        <td>This event fires immediately when the model value is about to clear. It's when model value not yet change, and the view not yet updated.</td>
                                     </tr>
                                     <tr>
                                         <td>cleared.bs.formimage</td>
-                                        <td>This event fires immediately when a file just removed from model. It's when model value change, and the view already updated. The <code>change.bs.formimage</code> called right after this.</td>
+                                        <td>This event fires immediately when the model value is cleared. It's when model value change, and the view already updated. The <code>change.bs.formimage</code> called right after this.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>update.bs.formimage</td>
+                                        <td>This event fires immediately when new image is about to set as the value of the model. It's when model value not yet change, and the view not yet updated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>updated.bs.formimage</td>
+                                        <td>This event fires immediately when new image just setted to the model. It's when model value change, and the view already updated. The <code>change.bs.formimage</code> called right after this.</td>
                                     </tr>
                                 </tbody>
                             </table>
