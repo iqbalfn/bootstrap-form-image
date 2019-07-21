@@ -365,8 +365,8 @@
           }
 
           data[config](relatedTarget);
-        } else if (_config.show) {
-          data.show(relatedTarget);
+        } else if (_config.preview) {
+          data.preview(relatedTarget);
         }
       });
     };
