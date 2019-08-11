@@ -158,6 +158,7 @@ class FormImage {
 
         this._element.classList.remove(ClassName.EMPTY)
         this._preview.style.backgroundImage = `url(${this._value})`
+        this._preview.href = this._value
 
         $(this._element).trigger(Event.UPDATED)
         $(this._element).trigger(Event.CHANGE)
